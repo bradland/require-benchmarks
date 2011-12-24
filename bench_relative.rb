@@ -4,7 +4,7 @@ require 'benchmark'
 
 files = Dir.glob('require-data/*.rb')
 
-Benchmark.bm do|b|
+Benchmark.bm(40) do|b|
   b.report("require_relative file") do
     files.each do |file|
       require_relative file
